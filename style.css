@@ -77,3 +77,10 @@ footer {
     padding: 10px;
     font-size: 0.9rem;
 }
+
+img {
+    display: block;
+    margin: 20px auto;
+    border: 5px solid #8b6a3f;
+    border-radius: 10px;
+}
