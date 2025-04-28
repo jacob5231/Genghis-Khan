@@ -1,86 +1,119 @@
+/* General Body Styling */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Georgia', serif;
-    background: url('https://i.imgur.com/OG9jaS0.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background-color: #f4f4f4;
     color: #3e2f1c;
 }
 
 header {
-    background-color: rgba(60, 45, 20, 0.8);
-    padding: 20px;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.banner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: all 1s ease;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+/* Add active class to display image */
+.banner-img.active {
+    opacity: 1;
+}
+
+/* Main Content */
+main {
+    padding: 30px;
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
-    color: #f5e0b7;
-    font-family: 'Trebuchet MS', sans-serif;
-    font-size: 2.5rem;
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #f5e0b7;
-    font-weight: bold;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #ffcc66;
-}
-
-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 30px;
-}
-
-.note {
+.content {
     background-color: rgba(245, 224, 183, 0.95);
     border: 2px solid #8b6a3f;
     border-radius: 10px;
-    width: 300px;
-    margin: 20px;
+    width: 80%;
+    max-width: 700px;
+    margin: 20px auto;
     padding: 20px;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
-    transition: transform 0.3s;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
 }
 
-.note:hover {
-    transform: translateY(-10px);
+.content img {
+    display: block;
+    margin: 20px auto;
+    border: 5px solid #8b6a3f;
+    border-radius: 10px;
 }
 
-.note h2 {
-    margin-top: 0;
-    font-family: 'Courier New', Courier, monospace;
+.content a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #8b6a3f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
+.content a:hover {
+    background-color: #5c4026;
+}
+
+/* Quiz Styling */
+.quiz {
+    background-color: #e8e8e8;
+    padding: 30px;
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.quiz input[type="text"], .quiz input[type="number"] {
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.quiz button {
+    background-color: #8b6a3f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.quiz button:hover {
+    background-color: #5c4026;
+}
+
+/* Footer */
 footer {
     background-color: rgba(60, 45, 20, 0.8);
     color: #f5e0b7;
     text-align: center;
     padding: 10px;
     font-size: 0.9rem;
-}
-
-img {
-    display: block;
-    margin: 20px auto;
-    border: 5px solid #8b6a3f;
-    border-radius: 10px;
 }
