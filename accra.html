@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accra Quiz - History Vault</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Accra History Quiz</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="figures.html">Figures</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="accra.html">Accra Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="content">
+      <h2>Quiz: How much do you know about Accra?</h2>
+      <form id="quizForm">
+        <p>1. When did Accra become the capital of Ghana?</p>
+        <input type="radio" name="q1" value="1877"> 1877<br>
+        <input type="radio" name="q1" value="1957"> 1957<br>
+        <input type="radio" name="q1" value="1990"> 1990<br>
+
+        <p>2. Accra was originally settled by which group?</p>
+        <input type="radio" name="q2" value="Ga people"> Ga people<br>
+        <input type="radio" name="q2" value="Akan"> Akan<br>
+        <input type="radio" name="q2" value="Ewe"> Ewe<br><br>
+
+        <button type="button" onclick="gradeQuiz()">Submit</button>
+        <p id="result"></p>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 History Vault</p>
+  </footer>
+  <script>
+    function gradeQuiz() {
+      let score = 0;
+      const form = document.forms['quizForm'];
+      if (form.q1.value === \"1877\") score++;
+      if (form.q2.value === \"Ga people\") score++;
+      document.getElementById(\"result\").textContent = `You got ${score}/2 correct.`;
+    }
+  </script>
+</body>
+</html>
+
+
